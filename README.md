@@ -1,6 +1,6 @@
 # Calculadora
 
-Calculadora web simple construida con HTML, CSS y JavaScript puro (sin dependencias).
+Calculadora web construida con **Vue 3** (Composition API + `<script setup>`) y **Vite**.
 
 ## Características
 
@@ -12,14 +12,30 @@ Calculadora web simple construida con HTML, CSS y JavaScript puro (sin dependenc
 ## Estructura del proyecto
 
 ```
-├── index.html   # Estructura y botones de la calculadora
-├── style.css    # Estilos y diseño
-└── script.js    # Lógica de la calculadora
+├── index.html        # Punto de entrada de Vite
+├── vite.config.js     # Configuración de Vite + plugin de Vue
+├── package.json
+└── src/
+    ├── main.js        # Monta la app de Vue
+    ├── style.css      # Estilos globales (fondo, layout de la página)
+    └── App.vue        # Componente de la calculadora (lógica + plantilla + estilos)
 ```
 
 ## Uso
 
-Abre [index.html](index.html) directamente en tu navegador, no requiere instalación ni servidor.
+Instala las dependencias y arranca el servidor de desarrollo:
+
+```bash
+npm install
+npm run dev
+```
+
+Para generar la versión de producción:
+
+```bash
+npm run build
+npm run preview
+```
 
 ## Controles de teclado
 
